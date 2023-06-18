@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Task List Manager</title>
+</head>
+<body >
+    <h1 class="bg-blue-200 text-center font-mono  font-bold p-3 text-gray-900 text-2xl">Task List Manager</h1>
+    <div class="flex mt-4 justify-center">
+        <input id="input" type="text" autofocus class="w-96 p-3 border-4 border-blue-500 rounded-lg outline-none fon"
+            placeholder="enter today's tasks" maxlength="100">
+        <button id="btn" type="submit"
+            class="border-4 ml-2 bg-slate-700  text-blue-50 p-3 border-blue-400 rounded-xl  hover:text-black hover:bg-blue-300 hover:border-black ">Add</button>
+    </div>
+    <div class=" mt-4  ">
+        <ul class="flex flex-col mx  justify-center bg-gray-400 list-disc" id="list">
+        </ul>
+    </div>
+    <footer class="fixed bottom-0 right-0">
+    <div class="bg-neutral-200 p-6 text-center dark:bg-neutral-700 rounded-lg  shadow-md">
+        <span>© 2023 Copyright:</span>
+        <a
+          class="font-semibold text-neutral-600 dark:text-neutral-400"
+          href="https://tailwind-elements.com/"
+          >Ramgopal Paneri</a
+        >
+      </div></footer>
+    <script src="index.js"></script>
+</body>
+</html>
