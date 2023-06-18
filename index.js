@@ -13,22 +13,18 @@ const add = (e) => {
     if(inpValue == ""){
             return alert('nothing is written in input field,please add taskname');
         }
-    if (ul.children[0].className == "text-center font-bold p-3 text-lg") {
-        ul.children[0].remove();
-    }   
-    const checkElem = document.getElementsByTagName('li');
-    for (let item of checkElem) {
-        if (item.children[1].innerText == inpValue) {
-            return alert("task already exists");
+        if (ul.children[0].className == "text-center font-bold p-3 text-lg") {
+            ul.children[0].remove();
         }
-    }
+    
     const newli = document.createElement('li');
     newli.innerHTML = `<h1 class="font-mono font-bold text-lg ml-8"> ${inpValue}</h1>
 <div>    <button onclick="editElement(this)"  type="button" class="editBtn mr-2 border-4 ml-8 bg-blue-100 text-black p-1 border-blue-400 rounded-lg hover:text-white hover:bg-black hover:border-white ">edit Task</button> 
 <button  type="button" onclick="deleteElement(this)" class="  border-4  bg-slate-700 text-blue-50 p-1 border-blue-400 rounded-xl hover:text-white hover:bg-black hover:border-white justify-self-end">remove Task</button></div>`;
     ul.appendChild(newli);
      newli.className = "border-4 rounded-md border-slate-600 mt-1  w-screen p-2 flex flex-row justify-between";
-};
+inp.value = "";
+    };
 btn.addEventListener('click', add)
 btn.addEventListener('contextmenu', add)
 const deleteElement = (elem) => {
